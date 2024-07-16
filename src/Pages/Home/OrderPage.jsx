@@ -21,7 +21,7 @@ const OrderPage = () => {
       <h1 className="font-bold">যেকোনো একটি প্যাকেজ নির্বাচন করুন</h1>
       {/* প্যাকেজ নির্বাচন Pages */}
       <div className="grid relative grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-        <div className="flex gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
+        <div className="flex flex-col md:flex-row gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
           <input className="accent-red-600" type="radio" name="" id="" />
           <img className="w-16" src={img1} alt="" />
           <div className="space-y-3">
@@ -38,7 +38,7 @@ const OrderPage = () => {
             </div>
           </div>
         </div>
-        <div className="relative flex gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
+        <div className="relative flex flex-col md:flex-row gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
           <div className="absolute top-6 -right-5 rotate-45">
             <p className="bg-red-500 px-5 font-semibold text-sm ">
               Best Selling
@@ -58,7 +58,7 @@ const OrderPage = () => {
             </div>
           </div>
         </div>
-        <div className="relative flex gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
+        <div className="relative  flex flex-col md:flex-row gap-8 items-center p-6 border border-[#30e64c] rounded-lg">
           <div className="absolute top-6 -right-5 rotate-45">
             <p className="bg-red-500 px-5 font-semibold text-sm ">
               Best Selling
