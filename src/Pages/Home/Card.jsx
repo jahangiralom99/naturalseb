@@ -4,7 +4,7 @@ import image3 from "../../assets/beauty.png";
 import image4 from "../../assets/man.png";
 import image5 from "../../assets/sleeping.png";
 import image6 from "../../assets/eating.png";
-import {  FaRegPlayCircle, FaShoppingCart } from "react-icons/fa";
+import { FaRegPlayCircle, FaShoppingCart } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,8 +18,10 @@ import img1 from "../../assets/4-1-1.png";
 import img2 from "../../assets/5-1-1.png";
 import img3 from "../../assets/6-1-1 (1).png";
 import img4 from "../../assets/6-1-1.png";
+import { useState } from "react";
 
 const Card = () => {
+  const [showModal, setShowModal] = useState(false);
   const card = [
     {
       id: 1,
@@ -113,7 +115,10 @@ const Card = () => {
             <SwiperSlide>
               <div className="relative">
                 <img src={img1} alt="" />
-                <div className="absolute top-16 left-36 z-[9]">
+                <div
+                  onClick={() => setShowModal(!false)}
+                  className="absolute top-16 left-36 z-[9]"
+                >
                   <FaRegPlayCircle className="text-6xl" />
                 </div>
               </div>
@@ -121,7 +126,10 @@ const Card = () => {
             <SwiperSlide>
               <div className="relative">
                 <img src={img2} alt="" />
-                <div className="absolute top-16 left-36 z-[9]">
+                <div
+                  onClick={() => setShowModal(!false)}
+                  className="absolute top-16 left-36 z-[9]"
+                >
                   <FaRegPlayCircle className="text-6xl" />
                 </div>
               </div>
@@ -129,13 +137,16 @@ const Card = () => {
             <SwiperSlide>
               <div className="relative">
                 <img src={img3} alt="" />
-                <div className="absolute top-16 left-36 z-[9]">
+                <div
+                  onClick={() => setShowModal(!false)}
+                  className="absolute top-16 left-36 z-[9]"
+                >
                   <FaRegPlayCircle className="text-6xl" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="relative">
+              <div onClick={() => setShowModal(!false)} className="relative">
                 <img src={img4} alt="" />
                 <div className="absolute top-16 left-36 z-[9]">
                   <FaRegPlayCircle className="text-6xl" />
@@ -144,6 +155,39 @@ const Card = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+        {showModal ? (
+          <>
+            <div className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999] outline-none focus:outline-none ">
+              <div className="relative w-full my-6 mx-auto ">
+                {/*content*/}
+                <div
+                  className={`border-0 rounded-lg shadow-lg relative flex flex-col max-w-screen-xl mx-auto bg-white outline-none focus:outline-none`}
+                >
+                  {/*body*/}
+                  <iframe
+                    className="lg:w-[1200px] md:w-[600px] mx-auto p-2"
+                    height="360"
+                    src="https://www.youtube.com/embed/bvDNjD7-mc0"
+                    title="My Video7"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                  {/*footer*/}
+                  <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                    <button
+                      className="[#3761bf] hover:bg-[#15306b] background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 border rounded-lg hover:text-white"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          </>
+        ) : null}
       </div>
     </div>
   );
