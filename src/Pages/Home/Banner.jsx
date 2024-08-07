@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { FaShoppingCart } from "react-icons/fa";
 // import banner from "../../assets/mmmmm.jpg";
 import { useContext, useEffect, useState } from "react";
