@@ -1,9 +1,9 @@
-import image1 from "../../assets/beauty.png";
-import image2 from "../../assets/mixing.png";
-import image3 from "../../assets/beauty.png";
-import image4 from "../../assets/man.png";
-import image5 from "../../assets/sleeping.png";
-import image6 from "../../assets/eating.png";
+// import image1 from "../../assets/beauty.png";
+// import image2 from "../../assets/mixing.png";
+// import image3 from "../../assets/beauty.png";
+// import image4 from "../../assets/man.png";
+// import image5 from "../../assets/sleeping.png";
+// import image6 from "../../assets/eating.png";
 import { FaRegPlayCircle, FaShoppingCart } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,50 +22,49 @@ import { useState } from "react";
 
 const Card = () => {
   const [showModal, setShowModal] = useState(false);
-  const card = [
-    {
-      id: 1,
-      image: `${image1}`,
-      title: "এটি সেবনের ৫মিনিটের মধ্যে আপনার পেটের সমস্ত গ্যাস বের হয়ে যাবে।",
-    },
-    {
-      id: 2,
-      image: `${image2}`,
-      title:
-        "মেথি মিক্স পাওডার নিয়ম তান্ত্রিক সেবন করার ফলে গ্যাস্ট্রিকের দীর্ঘস্থায়ী সমাধান পাবেন ইনশাআল্লাহ।",
-    },
-    {
-      id: 3,
-      image: `${image3}`,
-      title:
-        "এটি ২ থেকে ৩মাস সেবন করলে আপনাকে গ্যাস্ট্রিকের সমস্যার জন্য আর অন্য কোন ঔষধ ব্যবহার করতে হবে না।",
-    },
-    {
-      id: 4,
-      image: `${image4}`,
-      title:
-        "মেথি মিক্স সেবনে পেটের গ্যাস,পেটে বুকে পিঠে ব্যথা, টক ঢেকুর, বমি ভাব, ক্ষুধামন্দা, বদহজম,,দুর্বলতা দূর হবে।",
-    },
-    {
-      id: 5,
-      image: `${image5}`,
-      title:
-        "এটি সেবনে কোন রকম পার্শ্বপ্রতিক্রিয়া নেই,ল্যাবটেষ্ট এবং বিএসটিআই অনুমোদিত।",
-    },
-    {
-      id: 6,
-      image: `${image6}`,
-      title:
-        "হাজার হাজার মানুষ উপকার পেয়েছে তাদের রিভিউ আমাদের পেইজে দেখতে পারবেন।",
-    },
-  ];
+  // const card = [
+  //   {
+  //     id: 1,
+  //     image: `${image1}`,
+  //     title: "এটি সেবনের ৫মিনিটের মধ্যে আপনার পেটের সমস্ত গ্যাস বের হয়ে যাবে।",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: `${image2}`,
+  //     title:
+  //       "মেথি মিক্স পাওডার নিয়ম তান্ত্রিক সেবন করার ফলে গ্যাস্ট্রিকের দীর্ঘস্থায়ী সমাধান পাবেন ইনশাআল্লাহ।",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: `${image3}`,
+  //     title:
+  //       "এটি ২ থেকে ৩মাস সেবন করলে আপনাকে গ্যাস্ট্রিকের সমস্যার জন্য আর অন্য কোন ঔষধ ব্যবহার করতে হবে না।",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: `${image4}`,
+  //     title:
+  //       "মেথি মিক্স সেবনে পেটের গ্যাস,পেটে বুকে পিঠে ব্যথা, টক ঢেকুর, বমি ভাব, ক্ষুধামন্দা, বদহজম,,দুর্বলতা দূর হবে।",
+  //   },
+  //   {
+  //     id: 5,
+  //     image: `${image5}`,
+  //     title:
+  //       "এটি সেবনে কোন রকম পার্শ্বপ্রতিক্রিয়া নেই,ল্যাবটেষ্ট এবং বিএসটিআই অনুমোদিত।",
+  //   },
+  //   {
+  //     id: 6,
+  //     image: `${image6}`,
+  //     title:
+  //       "হাজার হাজার মানুষ উপকার পেয়েছে তাদের রিভিউ আমাদের পেইজে দেখতে পারবেন।",
+  //   },
+  // ];
 
   return (
     <div className="max-w-screen-xl mt-16 mx-auto px-4 bg-white pt-12">
       <div>
         {/* card */}
-        <div className="grid md:grid-cols-2  lg:grid-cols-3 gap-6 ">
-          {/* card start  */}
+        {/* <div className="grid md:grid-cols-2  lg:grid-cols-3 gap-6 ">
           {card.map((item) => (
             <div
               className="lg:w-96 hover:shadow-xl text-center rounded-lg mx-auto space-y-5 p-8 bg-[#c7e8ca]"
@@ -75,7 +74,7 @@ const Card = () => {
               <p className="text-xl font-bold">{item.title}</p>
             </div>
           ))}
-        </div>
+        </div> */}
         {/* button */}
         <div className="text-center mt-12 w-72 md:w-96 mx-auto">
           <button className="bg-[#f0a04b] rounded-lg  flex flex-col md:flex-row items-center gap-3 px-10 py-3 text-2xl font-bold text-white">
